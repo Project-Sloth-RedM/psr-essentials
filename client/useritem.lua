@@ -7,7 +7,7 @@ RegisterNetEvent('useitem:client:Drink', function(itemName)
     local prop = GetHashKey("p_water01x")
     RequestAnimDict(dict)
     while not HasAnimDictLoaded(dict) do
-        Citizen.Wait(10)
+        Wait(10)
     end
     RequestModel(prop)
     while not HasModelLoaded(prop) do
@@ -32,7 +32,7 @@ RegisterNetEvent('useitem:client:Eat', function(itemName)
     local prop = GetHashKey("P_BREAD05X")
     RequestAnimDict(dict)
     while not HasAnimDictLoaded(dict) do
-        Citizen.Wait(10)
+        Wait(10)
     end
     RequestModel(prop)
     while not HasModelLoaded(prop) do
