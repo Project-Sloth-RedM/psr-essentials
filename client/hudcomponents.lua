@@ -42,3 +42,18 @@ Citizen.CreateThread(function()
 	--Citizen.InvokeNative(0xC116E6DF68DCE667, 11, 2) -- ICON_HORSE_COURAGE_CORE / HIDE
 	
 end)
+
+-- Disable Controls 
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(3)
+
+        -- Weapons | inventory shit
+        DisableControlAction(0, 0xAC4BD4F1, true) -- Disable weapon wheel | TAB (while holding)
+        DisableControlAction(0, 0xB238FE0B, true) -- Disable toggle holster | TAB TAB (fast tapping)
+
+        -- LEFT ALT HUD
+        DisableControlAction(0, 0xCF8A4ECA, true) -- disable left alt hud | LEFT ALT (fast tapping)
+        --0x8AAA0AD4
+    end
+end)
