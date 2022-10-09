@@ -21,7 +21,7 @@ CreateThread(function()
         -- Here you can add hover text for the "small" icon.
         SetDiscordRichPresenceAssetSmallText('This is a lsmall icon with text')
 
-        QBCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
+        PSRCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
             SetRichPresence('Players: '..result..'/64')
         end)
 
